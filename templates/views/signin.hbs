@@ -1,0 +1,281 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/signin.css">
+    <title>Signin</title>
+</head>
+<style>
+    .signin-signup{
+            background-image: url(image/bg1.webp);
+
+    }
+
+    .container .cover{
+            background-image: url(image/login.svg);
+
+    }
+    .container #change:checked ~ .cover{
+        left: 0;
+        background-image: url(image/register.svg);
+    }
+
+</style>
+<body>
+
+    <section  id="header">
+        {{>navbar}}
+    </section>
+
+    <section class="signin-signup">
+        <div class="container">
+            <input type="checkbox" name="" id="change">
+            <div class="cover"></div>
+            <div class="forms"> {{!--  1  --}}
+            <form  action="/in" method="POST" >
+
+                <div class="signin-form">
+                    <label class="title" for="signin">Sign in</label>
+                    <div class="content">
+                        <div class="input">
+                            <i class="bi bi-envelope"></i>
+                            <input type="text" name="emailaddress" placeholder="Enter your email">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" name="passwordr" placeholder="Enter your password">
+                        </div>
+                        <div class="text">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="submitbtn">  {{!-- 1  --}}
+                            <button>submit</button> {{!-- 1   --}}
+                        </div> {{!-- 1   --}}
+
+                        
+                       
+                        <div class="text">Don't have an account? <label id="SignUpButton"   for="change">Sign up now</label></div>
+                    </div>
+                </div> 
+            </form>       {{!-- 2   --}}
+            <form  action="/up" method="POST"> {{!-- 3   --}}
+                <div class="signup-form">
+                    <label class="title" for="signup">Sign up</label>
+                    <div class="content"> 
+                        <div class="input">
+                            <i class="bi bi-person"></i>
+                            <input type="text" name="fullname" placeholder="Enter your name">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-envelope"></i>
+                            <input type="text" name="email" placeholder="Enter your email">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" name="password" placeholder="Create a password">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" name="Confirmpassword" placeholder="Confirm your password">
+                        </div>
+
+                        
+
+                        <div type="submit"   class="submitbtn input">
+                            {{!-- <input type="button " value="Submit"> --}}
+                            <button
+                                type="submit" 
+                            >
+                            Register
+                            </button>
+                        </div>
+                        <div class="text">Already have an account? <label id="SignInButton" for="change">Sign in now</label></div>
+                    </div>
+                </div>
+                
+            </form>
+        </div>  {{!--   4 --}}
+        </div>
+    </section>
+    <script src="/jsfiles/signin.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/signin.css">
+    <title>Signin</title>
+</head>
+<style>
+    .signin-signup{
+            background-image: url(image/bg1.webp);
+
+    }
+
+    .container .cover{
+            background-image: url(image/login.svg);
+
+    }
+    .container #change:checked ~ .cover{
+        left: 0;
+        background-image: url(image/register.svg);
+    }
+
+</style>
+<body>
+
+    <section  id="header">
+        {{>navbar}}
+    </section>
+
+    <section class="signin-signup">
+        <div class="container">
+            <input type="checkbox" name="" id="change">
+            <div class="cover"></div>
+            <form  action="/signin/in" method="POST" >
+
+                <div class="signin-form">
+                    <label class="title" for="signin">Sign in</label>
+                    <div class="content">
+                        <div class="input">
+                            <i class="bi bi-envelope"></i>
+                            <input type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" placeholder="Enter your password">
+                        </div>
+                        <div class="text">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="submitbtn input">
+                            <input type="button" value="Submit">
+                        </div>
+
+                        
+                       
+                        <div class="text">Don't have an account? <label id="SignUpButton"   for="change">Sign up now</label></div>
+                    </div>
+                </div> 
+
+                <div class="signup-form">
+                    <label class="title" for="signup">Sign up</label>
+                    <div class="content"> 
+                        <div class="input">
+                            <i class="bi bi-person"></i>
+                            <input type="text" name="fullname" placeholder="Enter your name">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-envelope"></i>
+                            <input type="text" name="email" placeholder="Enter your email">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" name="password" placeholder="Create a password">
+                        </div>
+                        <div class="input">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" name="Confirmpassword" placeholder="Confirm your password">
+                        </div>
+
+                        
+
+                        <div type="submit"   class="submitbtn input">
+                            {{!-- <input type="button " value="Submit"> --}}
+                            <button
+                                type="submit" 
+                            >
+                            Register
+                            </button>
+                        </div>
+                        <div class="text">Already have an account? <label id="SignInButton" for="change">Sign in now</label></div>
+                    </div>
+                </div>
+                
+            </form> 
+        </div>
+    </section>
+    <script src="/jsfiles/signin.js"></script>
+</body>
+
+</html> --}}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<style>
+    #main{
+        background-image: url(image/mainbg.svg);   
+    }
+</style>
+<body>
+    <section  id="header">
+        {{>navbar}}
+    </section>
+
+    <section id="main">
+        
+        <h2>Know about your health from your</h2>
+        <br>
+        <h1 id="hw">Height &nbsp and  &nbsp Weight</h1>
+        <br>
+        <h1>Calculate your Body Mass Index (BMI) </h1>
+        <br>
+        <a href="/bmi"><button id="BMI" >BMI Calculater</button></a>
+        
+    </section>
+
+    <section id="food">
+        <div class="foodi">
+            <img id="f1"src="image/food/food1.jpg" alt="Fruits Image">
+            <h5>Fruits</h5>
+        </div>
+        <div class="foodi">
+            <img id="f1"src="image/food/food1.jpg" alt="Fruits Image">
+            <h5>Vegeatable</h5>
+        </div>
+        <div class="foodi">
+            <img id="f1"src="image/food/food1.jpg" alt="Fruits Image">
+            <h5>Bakery</h5>
+        </div>
+        <div class="foodi">
+            <img id="f1"src="image/food/food1.jpg" alt="Fruits Image">
+            <h5>Dairy Products</h5>
+        </div>
+        <div class="foodi">
+            <img id="f1"src="image/food/food1.jpg" alt="Fruits Image">
+            <h5>Non-Veg</h5>
+        </div>
+    </section>
+
+    <section id="meals">
+        <h2>Daily Meals</h2>
+        <p>some food items combinations with required nutrition</p>
+        <div class="meal-container">
+            <div class="meal">
+                <img src="image/food/break3.svg" alt="morning">
+                <span>Morning</span>
+                <h4>Breakfast</h4>
+            </div>
+        
+        
+            <div class="meal">
+                <img src="image/food/snacks.svg" alt="morning">
+                <span>Evening</span>
+                <h4>Snacks</h4>
+            </div>
+        
+        
+            <div class="meal">
+                <img src="image/food/lunch1.svg" alt="morning">
+                <span>Day</span>
+                <h4>Lunch</h4>
+            </div>
+       
+        
+            <div class="meal">
+                <img src="image/food/dinner1.svg" alt="morning">
+                <span>Night</span>
+                <h4>Dinner</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="footer">
+        <div class="icons">
+            
+        </div>
+
+        </div>
+    </section> -->
+
+
+
+
+    <script src="/jsfiles/home.js"></script>
+</body>
+</html>

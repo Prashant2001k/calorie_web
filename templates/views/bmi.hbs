@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/bmi.css">
+</head>
+<style>
+    #main{
+    background-image: url(image/bmi/bmiright.svg);
+    }
+</style>
+<body>
+    <section  id="header">
+        {{>navbar}}
+    </section>
+
+    <section id="main">
+        <h1 id="title">BMI</h1>
+        <h1 id="title">Body Mass Index</h1>
+        <p id="def">Body mass index (BMI) is a person’s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
+
+        <div class="calculator">
+            <div class="content">
+                <div class="input">
+                    <label for="height">Height</label>
+                    <input type="number" min="0" id="height" >
+                    <select name="" id="selecth">
+                        <option value="">cm</option>
+                        <option value="">feet</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="weight">Weight</label>
+                    <input type="number" min="0" id="weight" >
+                    <select name="" id="selectw">
+                        <option value="">kg</option>
+                        <option value="">pounds</option>
+                    </select>
+                </div>
+                <button onclick="calculateBmi()" id="calculate">Calculate BMI</button>
+            </div>
+            <div class="result">
+                
+                <div id="ans"></div>
+                <p id="status"></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="/jsfiles/bmi.js">
+      // for navbar
+
+    </script>
+</body>
+</html>

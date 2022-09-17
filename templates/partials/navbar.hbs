@@ -1,0 +1,25 @@
+<a href="#"><img id="logo" src="image/logo2.svg" alt="" class="logo"></a>
+        <div>
+            <ul id="navbar"> 
+                {{!-- <li><a href="home">{{username}}</a></li> --}}
+                <li><a href="home">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="fruit">Food Items</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="contact">Contact us</a></li>
+                {{!-- <li><button><i class="bi bi-door-open-fill"><a href="signin">New user/ sign in</a></i></button></li>
+                 --}}
+                {{#if flag}}
+                    <li><button><i class="bi bi-door-open-fill"><a href="">{{username}}</a></i></button></li>
+                    {{else}}
+                        <li><button><i class="bi bi-door-open-fill"><a href="signin">New user/ sign in</a></i></button></li>
+                {{/if}}
+                
+                    
+                
+                <a href="#" id="close"><i class="bi bi-x-circle"></i></a>
+            </ul>
+        </div>
+        <div id="small">
+            <i id="ham" class="bi bi-list"></i>
+        </div>
