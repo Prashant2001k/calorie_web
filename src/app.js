@@ -52,6 +52,9 @@ app.get("/bmi",(req,res)=>{
 //     // res.send("<h1>hello this is our Home Page</h1>");
 //     res.render("signin");
 // }) 
+
+
+
 app.post("/up",async(req,res)=>{
     
     // res.render('home');
@@ -70,8 +73,14 @@ app.post("/up",async(req,res)=>{
                     confirmpassword:cpassword,
                 })
                 const registered= await registeruser.save();
+
+                const str=req.body.fullname;
+                const upper=str.toUpperCase();
                 console.log(password);
-                res.status(201).render("home"); 
+                res.status(201).render("home",{
+                    flag:true,
+                    username:`${upper}`,
+                }); 
             } 
             else{
                 res.send("passwords are not matching");
